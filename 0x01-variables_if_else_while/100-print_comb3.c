@@ -8,15 +8,15 @@ int main(void)
 {
 	int n, m;
 
-	for (n = 68; n <= 76; n++)
+	for (n = 28; n <= 36; n++)
 	{
-		for (m = 69; m <= 77; m++)
+		for (m = 29; m <= 37; m++)
 		{
 			if (m > n)
 			{
 				putchar(n);
 				putchar(m);
-				if (n != 76 || m != 77)
+				if (n != 36 || m != 37)
 				{
 					putchar(',');
 					putchar(' ');
@@ -24,6 +24,6 @@ int main(void)
 			}
 		}
 	}
-        putchar('\n');
+	putchar('\n');
 	return (0);
 }

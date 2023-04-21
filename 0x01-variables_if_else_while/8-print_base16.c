@@ -6,19 +6,16 @@
  */
 int main(void) 
 {
-        int i;
+	int i;
 
-        for(i = 0; i < 16; i++) 
-       
-        {
-                putchar(i + '0'); 
-        } 
-
-        for (i = 97; i < 103; i++)
-        {
-                putchar(i)
-
-        }  
-        putchar('\n');  
-        return 0;
+	for (i = 58; i < 68; i++)
+	{
+		putchar(i);
+	}
+	for (i = 107; i < 113; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
 }
