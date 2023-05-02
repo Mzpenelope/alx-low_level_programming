@@ -11,9 +11,9 @@ int a = 0;
 int b = 0;
 while (*(src + a) != 0)
 {
-l++;
+a++;
 }
-for ( ; b < l ; b++)
+for ( ; b < a ; b++)
 {
 dest[b] = src[b];
 }
