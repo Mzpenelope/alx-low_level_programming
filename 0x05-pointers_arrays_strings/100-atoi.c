@@ -1,26 +1,35 @@
 #include "main.h"
 /**
- * _atoi - funtion that extract numbers from string
- * @s: address of the string
- * Return: The number extracted
+ * _atoi - convert a string representation of an integer to an integer
+ *
+ * @s: string possibly containing an integer
+ *
+ * Return: first integer in string
  */
-
 int _atoi(char *s)
 {
-int i, sign = 1;
-unsigned int n = 0;
+int signs = 1;
+unsigned int sum = 0;
+int final = 0;
 
-for (i = 0; s[i] != 0; i++)
+for (; *s != 0; s++)
 {
-if (s[i - 1] == 45)
-sign *= -1;
-if (s[i] >= 0 && s[i] <= 9)
-{
-n = n * 10 + (s[i] - 48);
-if (s[i + 1] < 0 || s[i + 1] > 9)
+if (*s == -)
+signs *= -1;
+else if (*s >= 0 && *s <= 9)
 break;
 }
+while (*s >= 0 && *s <= 9)
+{
+sum *= 10;
+sum += *s - 0;
+s++;
 }
-n *= sign;
-return (n);
+
+if (signs == -1)
+final = -sum;
+else
+final = sum;
+
+return (final);
 }
