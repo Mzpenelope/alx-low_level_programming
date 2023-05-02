@@ -3,16 +3,13 @@
 * _atoi - Convert string to an integer.
 * @s: Pointer to a character string.
 *
-* Return: void.
+* Return: The converted integer value
 */
 int _atoi(char *s)
 {
-int sign;
-unsigned int num;
-char *temp;
-temp = s;
-num = 0;
-sign = 1;
+int sign = 1;
+unsigned int num = 0;
+char *temp = s;
 while (*temp != 0 && (*temp < 0 || *temp > 9))
 {
 if (*temp == -)
