@@ -12,7 +12,7 @@ unsigned int num = 0;
 char *temp = s;
 while (*temp != 0 && (*temp < 0 || *temp > 9))
 {
-if (*temp == -)
+if (*temp == '-')
 sign *= -1;
 temp++;
 }
