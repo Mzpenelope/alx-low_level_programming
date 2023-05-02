@@ -18,5 +18,5 @@ while (half < index)
 _putchar(str[half]);
 half++;
 }
-_putchar(n);
+_putchar(10);
 }
