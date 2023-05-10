@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * str_checker - check if two strings are identical.
  * @s1: string_1 base address.
@@ -23,6 +24,7 @@ return (0);
  * wildcmp - check if strings could be considered identical
  * @s1: base address for string.
  * @s2: base address for string.
+ *
  * Return: 1 if are considered identical.
  */
 int wildcmp(char *s1, char *s2)
