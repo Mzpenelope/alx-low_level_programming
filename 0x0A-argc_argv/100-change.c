@@ -6,40 +6,37 @@
  * @argv: arguments
  * Return: 0
  */
-int main(int argc, char **argv)
+int main(int args, char *argv[])
 {
-	int total, count;
-	unsigned int k;
-	char *p;
-	int cents[] = {25, 10, 5, 2};
+	int  m, token = 0;
 
-	if (argc != 2)
+	if (args != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	total = strtol(argv[1], &p, 10);
-	count = 0;
-
-	if (!*p)
+	m = atoi(argv[1]);
+	if (m < 0)
 	{
-		while (total > 1)
-		{
-			for (k = 0; k < sizeof(cents[k]); k++)
-			{
-				if (total >= cents[k])
-					count += total / cents[k];
-					total = total % cents[k];
-			}
-		}
-		if (total == 1)
-			count++;
+		printf("0\n");
+		return (0);
 	}
-	else
+	for (; m >= 0;)
 	{
-		printf("Error\n");
-		return (1);
+		if (m >= 25)
+			m -= 25;
+		else if (m >= 10)
+			m -= 10;
+		else if (m >= 5)
+			m -= 5;
+		else if (m >= 2)
+			m -= 2;
+		else if (m >= 1)
+			m -= 1;
+		else
+			break;
+		token += 1;
 	}
-	printf("%d\n", count);
+	printf("%d\n", token);
 	return (0);
 }
