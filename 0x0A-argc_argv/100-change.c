@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints the main number of coins to make change for an amount of money
- * @argc: argument count
+ * main - prints number of coins to make change for an amount of money
+ * @args: parameter entry
  * @argv: arguments
  * Return: 0
  */
