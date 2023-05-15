@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - find print 1st 98 fibonacci n
+ *main - find print 1st 98 fibonacci 
  *Return: 0 always.
  */
 int main(void)

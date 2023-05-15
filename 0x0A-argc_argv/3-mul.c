@@ -20,6 +20,5 @@ int main(int argc, char **argv)
 	m = atoi(argv[1]);
 	n = atoi(argv[2]);
 	printf("%d\n", m * n);
-
 	return (0);
 }
