@@ -6,14 +6,13 @@
   * a NULL string is treated as an empty string.
   *@s1: pointer to string.
   *@s2: pointer to string.
-  *
   *Return: pointer to newly allocated memory which
   *has s1, s2 and null byte.
   *NULL on failure.
   */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1, len2, size, i, j;
+	unsigned int len1, len2, size, m, n;
 	char *nstr;
 
 	if (s1 == NULL)
@@ -35,18 +34,18 @@ char *str_concat(char *s1, char *s2)
 	if (nstr == NULL)
 		return (NULL);
 
-	i = 0;
-	while (i < len1)
+	m = 0;
+	while (m < len1)
 	{
-		nstr[i] = s1[i];
-		i++;
+		nstr[m] = s1[m];
+		m++;
 	}
-	j = 0;
-	while (i <= size)
+	n = 0;
+	while (m <= size)
 	{
-		nstr[i] = s2[j];
-		i++;
-		j++;
+		nstr[m] = s2[n];
+		m++;
+		n++;
 	}
 	return (nstr);
 }

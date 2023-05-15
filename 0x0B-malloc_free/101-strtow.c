@@ -3,40 +3,37 @@
 /**
  * wordnos - counts no of words in a given string
  * @s: pointer to the string
- *
  * Return: No. of words in the string (int)
  */
 int wordnos(char *s)
 {
-	int flag, c, w;
+	int m, n, o;
 
-	flag = 0;
-	w = 0;
+	m = 0;
+	o = 0;
 
-	for (c = 0; s[c] != '\0'; c++)
+	for (n = 0; s[n] != '\0'; n++)
 	{
-		if (s[c] == ' ')
-			flag = 0;
-		else if (flag == 0)
+		if (s[n] == ' ')
+			m = 0;
+		else if (m == 0)
 		{
-			flag = 1;
-			w++;
+			m = 1;
+			o++;
 		}
 	}
-
-	return (w);
+	return (o);
 }
 /**
  * **strtow - splits a string into words
  * @str: string to split
- *
  * Return: pointer to an array of strings (Success)
  * or NULL (Error)
  */
 char **strtow(char *str)
 {
 	char **matrix, *tmp;
-	int i, k = 0, len = 0, words, c = 0, start, end;
+	int m, k = 0, len = 0, words, c = 0, start, end;
 
 	while (*(str + len))
 		len++;
@@ -48,13 +45,13 @@ char **strtow(char *str)
 	if (matrix == NULL)
 		return (NULL);
 
-	for (i = 0; i <= len; i++)
+	for (m = 0; m <= len; m++)
 	{
-		if (str[i] == ' ' || str[i] == '\0')
+		if (str[m] == ' ' || str[m] == '\0')
 		{
 			if (c)
 			{
-				end = i;
+				end = m;
 				tmp = (char *) malloc(sizeof(char) * (c + 1));
 				if (tmp == NULL)
 					return (NULL);
@@ -67,7 +64,7 @@ char **strtow(char *str)
 			}
 		}
 		else if (c++ == 0)
-			start = i;
+			start = m;
 	}
 
 	matrix[k] = NULL;

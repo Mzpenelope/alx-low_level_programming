@@ -1,18 +1,17 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  *create_array - creates an array of chars and initializes it with
+  *create_array - creates array of chars and initializes it with
   *a specific char.
   *@size: size of array.
   *@c: char to initialize array with.
-  *
   *Return: NULL if it fails or
   *Pointer to array.
   */
 char *create_array(unsigned int size, char c)
 {
 	char *arr;
-	unsigned int i;
+	unsigned int y;
 
 	if (size == 0)
 	{
@@ -26,9 +25,9 @@ char *create_array(unsigned int size, char c)
 	if (arr == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (y = 0; y < size; i++)
 	{
-		arr[i] = c;
+		arr[y] = c;
 	}
 
 	return (arr);

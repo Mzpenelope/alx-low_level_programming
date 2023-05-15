@@ -4,13 +4,12 @@
  * alloc_grid - create a matrix using malloc
  * @width: width of the matrix
  * @height: height of the matrix
- *
  * Return: return a pointer of pointer or null
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j, a, b;
-	int **p;
+	int m, n, u, v;
+	int **l;
 
 	if (width <= 0 || height <= 0)
 	{
@@ -18,31 +17,31 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
-		p = (int **) malloc(height * sizeof(int *));
+		l = (int **) malloc(height * sizeof(int *));
 		/* we have to make a malloc per pointer*/
-		if (!p)
+		if (!l)
 		{
-			free(p);
+			free(l);
 			return (NULL);
 		}
-		for (i = 0; i < height; i++)
+		for (m = 0; m < height; m++)
 		{
-			p[i] = (int *) malloc(width * sizeof(int));
-			if (!p[i])
+			l[m] = (int *) malloc(width * sizeof(int));
+			if (!l[m])
 			{
-				for (j = 0; j <= i; j++)
-					free(p[j]);
+				for (n = 0; n <= m; m++)
+					free(l[n]);
 				free(p);
 				return (NULL);
 			}
 		}
-		for (a = 0; a < height; a++)
+		for (u = 0; u < height; u++)
 		{
-			for (b = 0; b < width; b++)
+			for (v = 0; v < width; v++)
 			{
-				p[a][b] = 0;
+				p[u][v] = 0;
 			}
 		}
-		return (p);
+		return (l);
 	}
 }
