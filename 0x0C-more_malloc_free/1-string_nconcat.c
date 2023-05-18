@@ -41,5 +41,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (w = 0; w < v; w++)
 		s[w + u] = s2[w];
 	s[u + v] = '\0';
-	return (s)
+	return (s);
 }
