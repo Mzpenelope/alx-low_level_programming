@@ -4,7 +4,6 @@
   *array_range - creates an array of integers.
   *@min: minimum value.
   *@max: maximum value.
-  *
   *Return: pointer to newly created array.
   *NULL if malloc fails.
   *NULL if min > max.
