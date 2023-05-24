@@ -4,12 +4,11 @@
   *main - print opcodes of a given machine.
   *@argc: number of arguments.
   *@argv: argument vector.
-  *
   *Return: 0.
   */
 int main(int argc, char *argv[])
 {
-	int count, bytes;
+	int c, b;
 
 	if (argc != 2)
 	{
@@ -17,17 +16,17 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	bytes = atoi(argv[1]);
-	if (bytes < 0)
+	b = atoi(argv[1]);
+	if (b < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (count = 0; count < bytes; count++)
+	for (c = 0; c < bytes; c++)
 	{
-		printf("%02hhx", *((char *)main + count));
-		if (count  < bytes - 1)
+		printf("%02hhx", *((char *)main + c));
+		if (c  < b - 1)
 			printf(" ");
 		else
 			printf("\n");
