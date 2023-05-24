@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	for (c = 0; c < bytes; c++)
+	for (c = 0; c < b; c++)
 	{
 		printf("%02hhx", *((char *)main + c));
 		if (c  < b - 1)
