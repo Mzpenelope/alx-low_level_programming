@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
 /**
   *print_all - prints anything.
-  *@format: list of all arguments passed to the function.
-  *
+  *@format: list of all argument.
   *Return: void.
   */
 void print_all(const char * const format, ...)
