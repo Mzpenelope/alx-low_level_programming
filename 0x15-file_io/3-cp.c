@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * error_file - checks if files can be opened.
  * @file_from: file_from.
@@ -21,7 +20,6 @@ void error_file(int file_from, int file_to, char *argv[])
 		exit(99);
 	}
 }
-
 /**
  * main - check the code for Holberton School students.
  * @argc: number of arguments.
